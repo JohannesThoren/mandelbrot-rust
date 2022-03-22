@@ -99,11 +99,9 @@ fn main() {
 
     let mut do_zoom =
         |mut canvas: Canvas<Window>, zoom_factor: f64, pos: (i32, i32)| -> Canvas<Window> {
-            println!("{:?}", pos);
 
             let x = pos.0 as f64 / SCREEN_W as f64;
             let y = pos.1 as f64 / SCREEN_H as f64;
-            println!("{} {}", x, y);
 
             let w1 = XSCALE / zoom;
             let w2 = XSCALE / (zoom * zoom_factor);
